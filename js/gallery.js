@@ -1,4 +1,3 @@
-// 2. Масив зображень
 const images = [
   {
     preview:
@@ -65,8 +64,7 @@ const images = [
   },
 ];
 
-// 3. Створення розмітки галереї
-
+// 3. РОЗМІТКА ГАЛЕРЕЇ
 const galleryList = document.querySelector('.gallery');
 
 const galleryMarkup = images
@@ -74,4 +72,13 @@ const galleryMarkup = images
     ({ preview, original, description }) => `
 <li class="gallery-item">
   <a class="gallery-link" href="${original}">
-
+    <img
+      class="gallery-image"
+      src="${preview}"
+      alt="${description}"
+    />
+  </a>
+</li>
+  `)
+  .join('');
+galleryList.insertAdjacentHTML('beforeend', galleryMarkup);
