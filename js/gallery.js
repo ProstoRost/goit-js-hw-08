@@ -1,3 +1,4 @@
+// МАСИВ ЗОБРАЖЕНЬ
 const images = [
   {
     preview:
@@ -64,7 +65,7 @@ const images = [
   },
 ];
 
-// 3. РОЗМІТКА ГАЛЕРЕЇ
+// 3. СТВОРЕННЯ РОЗМІТКИ ГАЛЕРЕЇ
 const galleryList = document.querySelector('.gallery');
 
 const galleryMarkup = images
@@ -79,6 +80,5 @@ const galleryMarkup = images
     />
   </a>
 </li>
-  `)
+  )
   .join('');
-galleryList.insertAdjacentHTML('beforeend', galleryMarkup);
